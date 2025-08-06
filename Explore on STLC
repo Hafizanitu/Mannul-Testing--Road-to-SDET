@@ -1,0 +1,51 @@
+✅ Requirements Assurance
+Review all requirements thoroughly.Ensure there are:
+1.No typos2.No missing or partial requirements 3.All related documents (artifacts) are included.
+📘 User Stories in QA--Define features from an end-user perspective. QA reads stories to:Understand acceptance criteria .Extract test conditions.Prioritize and create test cases
+STLC – Software Testing Life Cycle
+1. Test Planning
+Define scope, strategy, and resources.QA Manager's responsibility.Senior QA analyzes risk factors.
+2. Test Analysis (What to Test)
+Deeply understand features and acceptance criteria.Note down key points.Prioritize test cases based on user stories.
+3. Test Design (How to Test)
+Write detailed test cases:Include positive & negative scenarios.Add test data.A form of static testing (before code runs)
+4. Test Implementation
+Prepare all testing resources:Test cases,Test data,Environment.Set priority of test cases.
+Perform:
+Smoke testing: Basic, high-impact features
+Regression testing: All existing features
+Group test cases into test suites
+5. Test Execution
+Run the test cases.Record actual vs expected results.Log and track defects
+6. Test Completion
+Ensure all planned tests are done
+Document:Test summary.Defect statistics.Final report and lessons learned
+🔧 SDLC vs STLC – Comparison
+Software Development Life Cycle  	    Software Testing Life Cycle
+Covers full software process         	Focused only on testing stages
+Phases: Req → Design → Dev → Deploy  	Phases: Req → Planning → Execution
+Ensures product is built	            Ensures product is tested
+
+ SDLC Models Overview
+1. Sequential Models
+Waterfall: One phase after another.
+V-Model: Verification and validation in parallel.
+2. Iterative Models
+Spiral, Prototyping: Repeated cycles to refine product.
+3. Incremental Models
+RAD (Rapid Application Development): Develop small functional modules quickly.
+4. MVP (Minimum Viable Product)
+Pilot version of the product with core functionalities for user feedback.
+🧪 Testing Approaches
+🔁 TDD – Test-Driven Development
+Write tests before development.Focused on dynamic testing
+✅ ATDD – Acceptance Test-Driven Development.Create acceptance test cases early.Helps in faster validation
+💬 BDD – Behavior-Driven Development.Understand user behavior
+Use Gherkin syntax: Given – When – Then
+👥 Testing Roles
+QA Manager / Lead: Planning, assigning tasks, analyzing risks
+QA Engineer / Tester:
+Design & execute test cases
+Identify bugs
+Do regression testing
+Maintain test documentation
