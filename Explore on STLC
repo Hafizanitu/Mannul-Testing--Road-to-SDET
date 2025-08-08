@@ -1,51 +1,101 @@
-✅ Requirements Assurance
-Review all requirements thoroughly.Ensure there are:
-1.No typos2.No missing or partial requirements 3.All related documents (artifacts) are included.
-📘 User Stories in QA--Define features from an end-user perspective. QA reads stories to:Understand acceptance criteria .Extract test conditions.Prioritize and create test cases
-STLC – Software Testing Life Cycle
-1. Test Planning
-Define scope, strategy, and resources.QA Manager's responsibility.Senior QA analyzes risk factors.
-2. Test Analysis (What to Test)
-Deeply understand features and acceptance criteria.Note down key points.Prioritize test cases based on user stories.
-3. Test Design (How to Test)
-Write detailed test cases:Include positive & negative scenarios.Add test data.A form of static testing (before code runs)
-4. Test Implementation
-Prepare all testing resources:Test cases,Test data,Environment.Set priority of test cases.
-Perform:
-Smoke testing: Basic, high-impact features
-Regression testing: All existing features
-Group test cases into test suites
-5. Test Execution
-Run the test cases.Record actual vs expected results.Log and track defects
-6. Test Completion
-Ensure all planned tests are done
-Document:Test summary.Defect statistics.Final report and lessons learned
-🔧 SDLC vs STLC – Comparison
-Software Development Life Cycle  	    Software Testing Life Cycle
-Covers full software process         	Focused only on testing stages
-Phases: Req → Design → Dev → Deploy  	Phases: Req → Planning → Execution
-Ensures product is built	            Ensures product is tested
+🔹 Manual Testing Overview
+Manual testing involves human effort to validate that software meets requirements and functions correctly.
+✅ Key Activities in Manual Testing
+1.Ensure all requirements are met (no gaps or missing features).
+2.Identify typos, mismatches, and incomplete documentation.
+3.Maintain proper artifacts (test plan, test case, bug report, etc.).
+4.Verify through user stories that features meet business expectations.
+5.Log and report bugs, defects, and overall test results.
 
- SDLC Models Overview
-1. Sequential Models
-Waterfall: One phase after another.
-V-Model: Verification and validation in parallel.
-2. Iterative Models
-Spiral, Prototyping: Repeated cycles to refine product.
-3. Incremental Models
-RAD (Rapid Application Development): Develop small functional modules quickly.
-4. MVP (Minimum Viable Product)
-Pilot version of the product with core functionalities for user feedback.
-🧪 Testing Approaches
-🔁 TDD – Test-Driven Development
-Write tests before development.Focused on dynamic testing
-✅ ATDD – Acceptance Test-Driven Development.Create acceptance test cases early.Helps in faster validation
-💬 BDD – Behavior-Driven Development.Understand user behavior
-Use Gherkin syntax: Given – When – Then
-👥 Testing Roles
-QA Manager / Lead: Planning, assigning tasks, analyzing risks
-QA Engineer / Tester:
-Design & execute test cases
-Identify bugs
-Do regression testing
-Maintain test documentation
+🔹 STLC – Software Testing Life Cycle
+STLC is a process followed during the software testing phase to ensure quality.
+
+1. Test Planning
+Done mostly by Test Manager or Senior QA.Set overall test strategy, goals, resource planning.Define tools, timelines, and responsibilities.
+
+2. Test Monitoring & Control
+Analyze progress and test risks.Metrics tracked: test coverage, defect density, pass/fail rates.Mostly handled by leads/seniors.
+
+3. Test Analysis
+Understand and analyze user stories & acceptance criteria.Identify what to test (features/functions).Shortlist and prioritize test scenarios.
+
+4. Test Design
+Write detailed test cases, test data, input sets (positive/negative).Prepare for static testing (review without execution).Focus: How to test.Map test cases to acceptance criteria.
+
+5. Test Implementation
+Organize test cases into test suites.Prepare testware (reusable test assets).Assign priorities (e.g., critical tests first).
+
+**Smoke Testing: Test core features for confidence.
+**Regression Testing: Run full or selected test suites.
+**Schedule tests and mark critical vs non-critical tests.
+
+6. Test Execution
+Execute test cases.Log pass/fail.Report bugs in tools like Jira.
+
+7. Test Completion
+Close test cycle.Share final test reports and metrics.Retrospective on what worked well and what didn’t.
+
+🔹 Difference Between SDLC and STLC
+Aspect	SDLC (Software Dev Life Cycle)                  	STLC (Software Testing Life Cycle)
+Focus	Whole system development                         	Testing the product
+Starts with	Requirement gathering	                      Requirement analysis for testing
+Involves	Design, architecture, coding	                  Test planning, case design, execution
+Testing Phase	Unit Testing, Integration	                Test Design, Execution, Closure
+
+🔹 SDLC Models
+1.Sequential Models
+//Waterfall: Linear, phase-by-phase.
+//V-Model: Verification & validation go in parallel.
+
+2.Iterative Models
+//Spiral Model: Risk-driven, iterative with feedback loop.
+//Prototyping: Build a prototype first, get feedback.
+
+3.Incremental Model
+//RAD (Rapid App Development): Develop in pieces, fast delivery.
+//MVP (Minimum Viable Product)
+Basic working version of the product released to users.Helps gather early feedback before full release.
+🔹 TDD vs ATDD vs BDD
+Approach	Description
+
+1.TDD (Test-Driven Development)	Write tests first, then develop code. Focuses on unit tests.
+2.ATDD (Acceptance Test-Driven Dev)	Acceptance criteria written before development. Ensures feature meets business needs.
+3.BDD (Behavior Driven Development)	Describe system behavior in natural language using tools like Cucumber, Gherkin syntax. Enhances communication between QA, Dev, and BA.
+
+🔹 Failure vs Defect
+Failure: When software behaves incorrectly in real usage.
+Defect (Bug): An issue in code found before release.
+🔹 Error
+Definition: A human mistake made by a developer or tester.
+Example: Wrong logic or typo in code.
+Who causes it?: Programmer/Tester.
+
+🔹 Defect
+Definition: A problem or issue found in the code during development or testing.
+Example: The login button doesn’t work due to wrong code.
+When found?: Before release.
+
+🔹 Failure
+Definition: When the software does not perform as expected during actual execution.
+Example: System crashes when user clicks “Pay Now”.
+When found?: After release or during runtime.
+
+🔹 Bug
+Definition: Common term for defect used by developers/testers.
+Note: Bug = Defect = Issue (used interchangeably in real-world)
+
+🔹 Agile Methodology – Key Concepts
+Agile is a flexible and iterative approach to software development.
+
+🔸 Agile Activities:
+Backlog: Prioritized task list (features/bugs).
+Sprint Planning: Decide what to complete in 1 sprint (1–4 weeks).
+Daily Scrum: Quick daily meeting to track progress.
+Sprint Review & Retrospective: End-of-sprint evaluations.
+Tools: Jira, Trello, ClickUp (for managing sprints and tasks)
+
+🔹 Scrum vs Kanban vs Scrumban
+Model	Description
+Scrum	---Fixed-duration sprints (2–4 weeks), clear roles (Scrum Master, Product Owner), structured meetings.
+Kanban---	Continuous flow, no sprint deadlines, tasks released when ready. Good for maintenance.
+Scrumban---	Hybrid of Scrum and Kanban. Work follows Scrum flow but allows flexible release like Kanban.
