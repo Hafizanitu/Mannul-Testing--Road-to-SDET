@@ -1,0 +1,53 @@
+Software Testing Classification – Complete Notes
+🔹 Classification Based on Action
+Manual Testing
+1.Performed by human testers.
+2.Uses various testing techniques like exploratory, sanity, ad-hoc, etc.
+3.No tools involved for test execution.
+4.Time-consuming but useful for UI/UX and usability testing.
+
+Automation Testing
+1.Uses tools/scripts to execute tests automatically.
+2.Saves time for repetitive tests (e.g., regression).
+3.Tools: Selenium, Cypress, Playwright, TestNG, etc.
+4.Good for large and complex projects with frequent code changes.
+
+🔹 Classification Based on Approach
+Static Testing
+1.Done without executing the code.
+Aim: Detect defects early (before coding starts).
+Activities include:
+Requirement analysis->Reviewing design documents (e.g., Figma, Flowcharts)->Code reviews->Walkthroughs & inspections
+
+Dynamic Testing
+Done by executing the application/code.
+Aim: Validate behavior and performance of the software.
+
+Types:
+Functional Testing: Based on system requirements.
+Non-Functional Testing: Tests performance, usability, reliability, etc.
+
+🔹 Classification Based on Techniques
+Black Box Testing--Focus on input/output and UI behavior.No knowledge of internal code.Performed mostly by QA testers.
+Example: Login page functionality.
+
+White Box Testing--Focus on internal code, logic, and structure.Done mostly by developers.
+Example: Unit testing, code path coverage.
+
+Gray Box Testing
+Partial knowledge of internal code + external behavior.Combines both white and black box approaches.
+Example: Integration testing.
+
+🔹 Functional Testing Types
+Type	Description
+Feature Testing--	Test each feature to ensure it works as expected.
+Sanity Testing--	Quick checks after a build to ensure critical features (like login, dashboard) work.
+Regression Testing--	Re-run all or selective test cases to confirm that new code changes haven't broken existing features.
+Smoke Testing--	End-to-end testing of core features; gives confidence in system stability. Prioritized tests.
+Exploratory Testing--	Tester explores the application to discover unknown issues. Requires good understanding of the system.
+Ad-Hoc Testing--	Informal testing without any plan or documentation. Often used to find "bug leaks".
+Monkey Testing--	Random testing to verify system behavior under unexpected inputs.
+Gorilla Testing--	Repeated testing of one feature/module to ensure its robustness.
+Alpha Testing	--Performed by internal team/users before release. Focuses on usability, UI/UX.
+Beta Testing--	Done by external users (end-users) after alpha. Real-world usage to find hidden bugs.
+A/B Testing	--Compare two versions (A and B) of a feature/UI to see which performs better (used in UI/UX improvement).
