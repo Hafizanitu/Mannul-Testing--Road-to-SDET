@@ -24,7 +24,7 @@ Done by executing the application/code.
 Aim: Validate behavior and performance of the software.
 
 Types:
-Functional Testing: Based on system requirements.
+Functional Testing: Based on system requirements
 Non-Functional Testing: Tests performance, usability, reliability, etc.
 
 🔹 Classification Based on Techniques
@@ -51,3 +51,5 @@ Gorilla Testing--	Repeated testing of one feature/module to ensure its robustnes
 Alpha Testing	--Performed by internal team/users before release. Focuses on usability, UI/UX.
 Beta Testing--	Done by external users (end-users) after alpha. Real-world usage to find hidden bugs.
 A/B Testing	--Compare two versions (A and B) of a feature/UI to see which performs better (used in UI/UX improvement).
+.Functional Testing	Sanity, Regression, Smoke, Ad-hoc, Exploratory, Feature Testing
+.Special Testing	Monkey, Gorilla, Alpha, Beta, A/B
