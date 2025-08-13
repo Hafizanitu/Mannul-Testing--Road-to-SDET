@@ -1,0 +1,115 @@
+Test Levels
+1.Unit Testing
+Granular/component-level testing
+Focus: Code-level verification of individual functions/classes/modules.Done mostly by developers
+2.Integration Testing
+API-level testing.Checks:
+Frontend ↔ Backend API connectivity
+Backend ↔ Database interaction
+Two types:
+Component Integration – Integrates related modules and tests them together.
+System Integration – Tests interaction between independent systems.
+3.System Testing
+End-to-end product testing.Done mostly by QA team
+Includes: Smoke, Ad-hoc, Monkey, Gorilla, Regression testing, etc.
+4.Acceptance Testing
+Performed by Product Manager / Client.Goal: Approve product for release
+Types: Alpha, Beta testing
+Agile Testing Quadrants
+Q1 – Technology-facing, supports the team
+Fully automated.Part of CI/CD process
+Q2 – Business-facing, supports the team.Manual or automated
+Examples: Functional tests, user story tests, user experience prototypes, API tests
+Q3 – Business-facing, critique the product.No technology focus (manual)
+example: Exploratory testing, usability testing, UAT
+Q4 – Technology-facing, critique the product
+Often automated
+Examples: Smoke, Sanity, System, Non-functional testing
+
+Testing Techniques
+1. Black Box / Specification-based
+Focus: Input/output without looking at internal code
+Main methods:
+
+Equivalence Partitioning (EP) – Divide input range into valid & invalid partitions
+Boundary Value Analysis (BVA) – Test at edges of input range
+2-point BVA → Min-1, Min, Max, Max+1
+3-point BVA → Min-1, Min, Min+1, Max-1, Max, Max+1
+State Transition Testing – Test behavior changes under different states/conditions
+Decision Table Testing – Systematic combination of inputs (2^n possibilities, where n = number of inputs)
+**Decision Table Example – Password Policy
+Policy Rules:
+Length: 8–12 chars
+≥ 1 uppercase letter
+≥ 1 lowercase letter
+≥ 1 special character
+≥ 1 numeric value
+First & last char ≠ blank space
+No easily guessable sequential patterns
+
+**Test Case Generation:
+If strictly following Decision Table method:
+n = 7 conditions → 2^7 = 128 total possible combinations (valid + invalid)
+Valid cases:
+Need to satisfy all 7 conditions → Only 1 fully valid combination
+But to cover all equivalence classes & boundaries, more valid cases may be added for variations
+
+2. White Box Testing
+Also called Glass Box / Clear Box.Focus: Code structure and logic
+Done before/with code execution (code review, static analysis)
+Coverage Types:
+Statement Coverage – Execute every line of code at least once.Nested statement rule: Number of cases + 1 (without if)
+No else → 1 case, With else → 2 cases
+Decision/Branch Coverage – Execute every decision branch (True/False)
+Nested: count of if + 1
+Un-nested: 2 cases per if
+
+3. Experience-based Testing
+Error Guessing
+Based on past defects, intuition, common problem areas
+Exploratory Testing
+Learn → Design → Execute tests simultaneously
+Time-boxed with a test charter (specific goal)
+**Test Case vs Checklist
+Test Case – Detailed step-by-step instructions with input, expected result, and pass/fail criteria.
+Checklist – Simple list of items to verify, without detailed steps.
+**Test Plan vs Test Strategy
+Test Plan – Project-specific document, outlines scope, schedule, resources, responsibilities, approach, risks.
+Test Strategy – Organization-level high-level approach for testing across projects.
+**Entry & Exit Criteria
+Entry Criteria – Conditions that must be met before testing starts.
+Exit Criteria – Conditions that must be met before testing ends.
+
+Common Estimation Techniques
+1. Metrics-based Estimation--Uses historical data from similar past projects.
+a. Estimation Based on Ratio
+Formula:
+Testing Effort=Development Effort×Test-to-Dev Ratio
+Example:
+Dev effort = 200 person-hours.Ratio = 0.3 (based on past data)
+Testing Effort = 200 × 0.3 = 60 person-hours
+b. Extrapolation
+Uses metrics from one phase to predict the rest.
+Example:
+Average time to write 1 test case = 15 minutes.Total test cases = 300
+Effort = 300 × 15 min = 4,500 min = 75 hours
+2. Expert-based Estimation
+Relies on knowledge and experience of senior QA or SMEs.
+a. Wideband Delphi
+Steps:
+Select a group of experts.Each provides individual estimates.Discuss differences.Repeat until consensus is reached.Reduces bias, improves accuracy.
+b. Three-Point Estimation
+Based on PERT (Program Evaluation and Review Technique)
+Uses three values:
+O = Optimistic estimate (best case).M = Most likely estimate
+P = Pessimistic estimate (worst case)
+Formula:
+𝐸=𝑂+4𝑀+𝑃/6
+​Example:
+O = 20 hrs, M = 30 hrs, P = 50 hrs
+E = (20 + 4×30 + 50) / 6 = (20 + 120 + 50) / 6 = 190 / 6 ≈ 31.7 hrs
+Estimation Steps in QA
+Understand scope – requirements, features, modules.
+Identify tasks – test case design, environment setup, execution, defect reporting, re-testing.
+Select estimation method – metrics or expert-based..Break down work – module-wise, sprint-wise.
+Add contingency – usually +10–20% buffer for risks..Review and adjust – with PM, Dev, QA lead.
